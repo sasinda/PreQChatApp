@@ -1,19 +1,23 @@
 <template name="bookmarks">
   <div class="page bookmarks">
-    {{> nav title='Your Bookmarks' subtext=recipeCount}}
+    {{> nav title='Tell us about Dr. Perry' subtext="satisfaction survey"}}
 
-    <div class="content-scrollable">
-      <div class="list-recipes">
-        {{#each this}}
-          {{> recipeItem recipe=this size='large'}}
-        {{else}}
-          <div class="wrapper-message">
-            <div class="title-message">No bookmarks yet</div>
-            <div class="subtitle-message">Tap <span class="icon-bookmark-hollow"></span> to bookmark your favorite recipes. <a href="{{pathFor 'home'}}">Return home</a></div>
+    <div class="content-scrollable" style="padding: 5%">
+        <br/>
+        <br/>
+        <br/>
 
-          </div>
-        {{/each}}
-      </div>
+      <h2> Did Dr. Perry answer your questions today?</h2>
+        <br/>
+
+        <form action="">
+            <input type="radio" name="gender" value="male" style="margin-bottom: 2%"> Yes<br>
+            <input type="radio" name="gender" value="female" style="margin-bottom: 2%"> Some but not all Questions<br>
+            <input type="radio" name="gender" value="other" style="margin-bottom: 2%"> No
+        </form>
+
+
+
     </div>
   </div>
 </template>

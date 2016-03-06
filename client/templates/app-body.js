@@ -19,6 +19,7 @@ Deps.autorun(function() {
   nextInitiator = null;
 });
 
+
 var notifications = new Mongo.Collection(null);
 
 Template.appBody.addNotification = function(notification) {

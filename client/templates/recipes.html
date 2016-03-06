@@ -1,17 +1,21 @@
 <template name="recipes">
   <div class="page recipes">
-    {{> nav title='Recipes' black=true}}
+    {{> nav title='Symptoms' black=true}}
 
-    <div class="content-scrollable">
-      <div class="list-recipes">
-        {{#each this}}
-          {{#if highlighted}}
-            {{> recipeItem recipe=this size='large'}}
-          {{else}}
-            {{> recipeItem recipe=this size='small'}}
-          {{/if}}
-        {{/each}}
-      </div>
+    <div class="content-scrollable" style="padding: 10%">
+        <br/>
+        <br/>
+        <br/>
+        <img src="img/activity/bellypain.jpg" alt="Go Local"/>
+        <p> Are you feeling a bulge or lump in the bottom belly area? </p>
+        <form action="">
+            <input type="radio" name="gender" value="male" style="margin-bottom: 2%"> Yes<br>
+            <input type="radio" name="gender" value="other" style="margin-bottom: 2%"> No<br>
+            period during pregnancy<input type="text" style="background-color: #cccccc">
+        </form>
+        <br/>
+        <br/>
+        <img src="img/activity/naucia.jpg" style="width: 80%" alt="Go Local"/>
     </div>
 
   </div>

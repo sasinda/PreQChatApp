@@ -1,17 +1,81 @@
 <template name="activity">
-  <a href="{{path}}" class="item-activity">
-
+  <div class="item-activity">
+      <!--{{path}}-->
     <span class="attribution">
       <span class="avatar">
         <img src="{{userAvatar}}" class="image-avatar">
       </span>
       <span class="meta">
-        <span class="author">{{firstName}}</span> made <span class="recipe">{{recipeTitle}}</span>: {{text}}
-       {{#if place}}<span class="location">&mdash;{{place}}</span>{{/if}}
+        <span class="author">Dr. Perry</span>
+          <!--{{firstName}}-->
        </span>
     </span>
 
-    <div class="bg-image" style="background-image: url('{{image}}');"></div>
+    <div class="message">
+        {{> input }}
+        {{> messages }}
+    </div>
 
-  </a>
+  </div>
+</template>
+
+
+<template name="messages">
+    {{#each messages}}
+        <strong>{{name}}:</strong> {{message}}<br>
+    {{/each}}
+</template>
+
+<template name="input">
+    <br/>
+    <p> Add Questions: <br/>
+        <input type="text" style="background-color:rgba(52,152,219, 0.4); width:100%; height: 140px " id="message">
+    </p>
+
+    <br/>
+    <h1>Question List</h1>
+    <br/>
+    <ul style="height: 100%">
+        <a href="#ans1">
+        <li style="background-color: #2ecc71; padding: 4% ;margin-bottom: 2%; color: white">
+            What causes rib pain during pregnancy?
+        </li>
+        </a>
+        <li style="background-color: #2ecc71; padding: 4%; margin-bottom: 2%;color: white">
+            Can I eat cold cuts during pregnancy?
+        </li>
+
+        <li style="background-color: #2ecc71; padding: 4%;margin-bottom: 2%;color: white">
+            Can I tan while I am pregnant?
+        </li>
+
+        <li style="background-color: #95a5a6; padding: 4%;margin-bottom: 2%;color: white">
+            What is the Group B streptococcus test and when will I be tested?
+        </li>
+
+        <li style="background-color: #95a5a6; padding: 4%;margin-bottom: 2%;color: white">
+            Can I exercise during my first trimester?
+        </li>
+
+    </ul>
+
+    <br/>
+    <br/>
+    <br/>
+    <h1> Answers:</h1>
+
+
+    <ul>
+
+        <li id="ans1" style="background-color: #2ecc71; padding: 4% ;margin-bottom: 2%; color: white">
+           Learn More About Rib Pain
+        </li>
+
+        <li>
+            Rib cage pain may be sharp, dull, or achy and felt at or below the chest or above the navel on either side. It may occur after an obvious injury or without explanation. Rib cage pain can be due to anything from pulled muscles to a rib fracture. This pain... Read more
+        </li>
+        <br/>
+
+
+    </ul>
 </template>
